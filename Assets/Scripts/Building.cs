@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class PriceTag
 {
     public float price_wood;
@@ -9,6 +10,7 @@ public class PriceTag
     public float price_food;
 }
 
+[System.Serializable]
 public class Buildinfo
 {
     public int id;
