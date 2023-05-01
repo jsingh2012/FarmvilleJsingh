@@ -177,6 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &1342009
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -290,6 +291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &4330442
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -885,6 +887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &78013332
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -959,7 +962,7 @@ GameObject:
   m_Component:
   - component: {fileID: 80748689}
   m_Layer: 5
-  m_Name: LumberJack (1)
+  m_Name: StoneHouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1036,6 +1039,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &131061327
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1149,6 +1153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &143173043
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1456,7 +1461,7 @@ GameObject:
   m_Component:
   - component: {fileID: 207669596}
   m_Layer: 5
-  m_Name: LumberJack (2)
+  m_Name: Windmill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1729,6 +1734,7 @@ GameObject:
   - component: {fileID: 242223640}
   - component: {fileID: 242223639}
   - component: {fileID: 242223638}
+  - component: {fileID: 242223641}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1851,6 +1857,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242223636}
   m_CullTransparentMesh: 1
+--- !u!114 &242223641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242223636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f57a12bf6d340699e558eb419c4d44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedBuildingId: 2
+  connectedBuilding: {fileID: 0}
+  resourcesText: {fileID: 231819144}
 --- !u!1 &253853989
 GameObject:
   m_ObjectHideFlags: 0
@@ -2269,6 +2290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &431340412
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2382,6 +2404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &433157941
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2732,6 +2755,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &500518840
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3041,7 +3065,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LumberJack
+  m_text: Windmill
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3596,6 +3620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &605977023
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3807,6 +3832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &634712138
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3920,6 +3946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &676742711
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4229,6 +4256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &712474743
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4501,6 +4529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &740401462
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4675,6 +4704,7 @@ GameObject:
   - component: {fileID: 757249594}
   - component: {fileID: 757249593}
   - component: {fileID: 757249592}
+  - component: {fileID: 757249595}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -4797,6 +4827,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 757249590}
   m_CullTransparentMesh: 1
+--- !u!114 &757249595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757249590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f57a12bf6d340699e558eb419c4d44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedBuildingId: 3
+  connectedBuilding: {fileID: 0}
+  resourcesText: {fileID: 2077188096}
 --- !u!1 &764428879
 GameObject:
   m_ObjectHideFlags: 0
@@ -5011,6 +5056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &781243708
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5284,6 +5330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &851499546
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5871,7 +5918,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LumberJack
+  m_text: Stone House
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6193,6 +6240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &921006377
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6874,6 +6922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &1061998923
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6955,6 +7004,7 @@ GameObject:
   - component: {fileID: 1077878441}
   - component: {fileID: 1077878440}
   - component: {fileID: 1077878439}
+  - component: {fileID: 1077878442}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -7077,6 +7127,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077878437}
   m_CullTransparentMesh: 1
+--- !u!114 &1077878442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077878437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f57a12bf6d340699e558eb419c4d44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedBuildingId: 1
+  connectedBuilding: {fileID: 0}
+  resourcesText: {fileID: 159670609}
 --- !u!1 &1082707079
 GameObject:
   m_ObjectHideFlags: 0
@@ -7126,6 +7191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &1082707082
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7377,6 +7443,7 @@ GameObject:
   - component: {fileID: 1143916384}
   - component: {fileID: 1143916383}
   - component: {fileID: 1143916382}
+  - component: {fileID: 1143916385}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -7499,6 +7566,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143916380}
   m_CullTransparentMesh: 1
+--- !u!114 &1143916385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143916380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f57a12bf6d340699e558eb419c4d44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedBuildingId: 4
+  connectedBuilding: {fileID: 0}
+  resourcesText: {fileID: 1999154966}
 --- !u!1 &1166845726
 GameObject:
   m_ObjectHideFlags: 0
@@ -7760,7 +7842,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LumberJack
+  m_text: House
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8185,6 +8267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &1313643033
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8494,6 +8577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &1316794033
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8607,6 +8691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &1421472928
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8720,6 +8805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &1426822570
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -8931,6 +9017,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &1557147690
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9147,6 +9234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &1584415166
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9265,6 +9353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &1605038765
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9421,6 +9510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &1663476059
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9722,6 +9812,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!4 &1732742363 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fe6c2ca4ac3c62d47a92606f97ccc50e, type: 3}
@@ -9895,6 +9986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &1766858438
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10050,9 +10142,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b197fea8a714e8e9ec1d51479b8d0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wood: 0
-  stone: 0
-  food: 0
+  wood: 30
+  stone: 10
+  food: 5
   ResourceText: {fileID: 2082739517}
 --- !u!1 &1791263704
 GameObject:
@@ -10103,6 +10195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &1791263707
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10216,6 +10309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &1804504497
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10427,6 +10521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &1848489815
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10969,6 +11064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &1910914464
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12029,6 +12125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &2093720359
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12142,6 +12239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &2108815779
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12255,6 +12353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &2116904809
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12368,6 +12467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GridId: 0
   isOccupied: 0
+  connectedBuilding: {fileID: 0}
 --- !u!64 &2124671064
 MeshCollider:
   m_ObjectHideFlags: 0

@@ -33,10 +33,10 @@ public class Build : MonoBehaviour
     void Update()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Debug.Log("ray ");
+// Debug.Log("ray ");
         if (Physics.Raycast(ray, out mouseHit))
         {
-            Debug.Log("mouseHit ");
+            //Debug.Log("mouseHit ");
             GridElement g = mouseHit.transform.GetComponent<GridElement>();
             if(!g)
             {
