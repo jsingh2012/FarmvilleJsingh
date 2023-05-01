@@ -251,6 +251,6 @@ MonoBehaviour:
     price_wood: 20
     price_stone: 0
     price_food: 0
-  objName: 
+  objName: Stone
   placed: 0
   baseResourceGain: 0

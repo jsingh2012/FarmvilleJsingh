@@ -17,7 +17,7 @@ public class GameResources : MonoBehaviour
 
     private void FixedUpdate()
     {
-        ResourceText.text = "Wood : " + wood.ToString() + " Stone " + stone.ToString() + " food " + food.ToString();
+        ResourceText.text = "Wood : " + ((int)wood).ToString() + " Stone " + ((int)stone).ToString() + " food " +((int) food).ToString();
     }
 
 }

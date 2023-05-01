@@ -122,7 +122,7 @@ public class Build : MonoBehaviour
 
     public void PlaceBuilding()
     {
-        if(! currentCreatedBuildable || curHoveredGridElement.isOccupied)
+        if(! currentCreatedBuildable || (curHoveredGridElement && curHoveredGridElement.isOccupied))
         {
             return;
         }
@@ -135,6 +135,7 @@ public class Build : MonoBehaviour
             b.placed = true;
             b.info.connectedGridId = curHoveredGridElement.GridId;
             b.info.yRot = b.transform.localEulerAngles.y;
+            b.UpgradeBuilding();
 
             currentCreatedBuildable = null;
             buildInprogress = false;

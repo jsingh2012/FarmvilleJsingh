@@ -55,7 +55,7 @@ MonoBehaviour:
     price_wood: 20
     price_stone: 0
     price_food: 0
-  objName: 
+  objName: LumberJack
   placed: 0
   baseResourceGain: 0
 --- !u!1 &3540462469826958348

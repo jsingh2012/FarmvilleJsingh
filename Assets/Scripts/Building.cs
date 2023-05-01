@@ -27,33 +27,43 @@ public class Building : MonoBehaviour
 
     public string objName;
     public bool placed;
-    public int baseResourceGain;
+    public int baseResourceGain = 1;
 
     private GameResources resources;
 
     void Awake()
     {
         resources = FindObjectOfType<GameResources>();
+        baseResourceGain = 1;
     }
 
     private void Update()
     {
-        if(!placed)
+        Debug.Log("Building " + info.id + " placed "+ placed);
+        if (!placed)
         {
             return;
         }
-
+        
         switch(info.id)
         {
             case 1:
-                resources.wood += (baseResourceGain * info.level) * Time.deltaTime;
+                resources.wood += ((baseResourceGain * info.level) * Time.deltaTime);
                 break;
             case 2:
-                resources.stone += (baseResourceGain * info.level) * Time.deltaTime;
+                resources.stone += ((baseResourceGain * info.level) * Time.deltaTime);
                 break;
             case 3:
-                resources.food += (baseResourceGain * info.level) * Time.deltaTime;
+                resources.food += ((baseResourceGain * info.level) * Time.deltaTime);
                 break;
         }
+    }
+
+    public void UpgradeBuilding()
+    {
+        info.level += 1;
+        resources.wood -= price.price_wood;
+        resources.stone -= price.price_stone;
+        resources.food -= price.price_food;
     }
 }

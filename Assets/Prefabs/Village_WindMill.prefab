@@ -57,7 +57,7 @@ MonoBehaviour:
     price_wood: 20
     price_stone: 30
     price_food: 0
-  objName: 
+  objName: WindMill
   placed: 0
   baseResourceGain: 0
 --- !u!1 &1663795861051089942
