@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using UnityEngine.SocialPlatforms.Impl;
 
 [System.Serializable]
 public class SavedProfile
@@ -22,7 +23,9 @@ public class Save : MonoBehaviour
     private Buildings buildgings;
     private Build build;
 
-  
+    float timer = 0.0f;
+
+
     void Awake()
     {
         build = FindObjectOfType<Build>();
@@ -34,6 +37,25 @@ public class Save : MonoBehaviour
     private void Start()
     {
         LoadGame();
+        StartCoroutine(time());
+    }
+
+    IEnumerator time()
+    {
+        while (true)
+        {
+            timeCount();
+            yield return new WaitForSeconds(1);
+        }
+    }
+    void timeCount()
+    {
+        timer += 1;
+        if(timer % 10 == 0)
+        {
+            SaveGame();
+            Debug.Log("Game Saved!");
+        }
     }
 
     private void SaveGame()
