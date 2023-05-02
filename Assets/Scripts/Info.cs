@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class Info : MonoBehaviour
 {
@@ -28,8 +29,22 @@ public class Info : MonoBehaviour
         {
             selectedBuilding = build.curSelectedGridElement.connectedBuilding;
             nameText.text = selectedBuilding.objName + " Level " + selectedBuilding.info.level;
+        } else
+        {
+            nameText.text = "No building Selected";
+            selectedBuilding = null;
         }
-        
+
+        bool result = false;
+        if (selectedBuilding)
+        {
+            if (resources.wood >= selectedBuilding.price.price_wood && resources.stone >= selectedBuilding.price.price_stone && resources.wood >= selectedBuilding.price.price_wood)
+            {
+                result = true;
+            }
+        }
+        btnDestroy.interactable = result;
+        btnUpgrade.interactable = result;
     }
 
     public void OnBtnUpgrade()
@@ -37,6 +52,16 @@ public class Info : MonoBehaviour
         if(selectedBuilding)
         {
             selectedBuilding.UpgradeBuilding();
+        }
+    }
+
+    public void OnBtnDestroy()
+    {
+        if (selectedBuilding)
+        {
+            build.curSelectedGridElement.isOccupied = false;
+            build.buildings.builtObject.Remove(selectedBuilding.gameObject);
+            Destroy(selectedBuilding.gameObject);
         }
     }
 }

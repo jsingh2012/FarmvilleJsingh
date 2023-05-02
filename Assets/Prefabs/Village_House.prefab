@@ -54,7 +54,7 @@ MonoBehaviour:
   price:
     price_wood: 30
     price_stone: 30
-    price_food: 0
+    price_food: 10
   objName: House
   placed: 0
   baseResourceGain: 0

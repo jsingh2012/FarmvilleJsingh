@@ -248,7 +248,7 @@ MonoBehaviour:
     yRot: 0
     connectedGridId: 0
   price:
-    price_wood: 20
+    price_wood: 30
     price_stone: 0
     price_food: 0
   objName: Stone

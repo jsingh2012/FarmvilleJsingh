@@ -29,7 +29,7 @@ public class BuyButton : MonoBehaviour
                 break;
             }
         }
-        resourcesText.text = "Wo: " + connectedBuilding.price.price_wood + " |  St: " + connectedBuilding.price.price_stone + " | Fd: " + connectedBuilding.price.price_wood;
+        resourcesText.text = "Wo: " + connectedBuilding.price.price_wood + " |  St: " + connectedBuilding.price.price_stone + " | Fd: " + connectedBuilding.price.price_food;
         Debug.Log(" Buy Button connectedBuildingId " + connectedBuildingId + " resourcesText.text " + resourcesText.text);
     }
 
