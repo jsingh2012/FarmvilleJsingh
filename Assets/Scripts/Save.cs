@@ -28,9 +28,15 @@ public class Save : MonoBehaviour
         build = FindObjectOfType<Build>();
         resources = FindObjectOfType<GameResources>();
         buildgings = FindObjectOfType<Buildings>();
+        
     }
 
-   private void SaveGame()
+    private void Start()
+    {
+        LoadGame();
+    }
+
+    private void SaveGame()
     {
         if(profile == null )
         {
@@ -60,6 +66,34 @@ public class Save : MonoBehaviour
         bf.Serialize(fs, profile);
 
         fs.Close();
+    }
+
+    private void LoadGame()
+    {
+        string path = Application.persistentDataPath + "/save.dat";
+        Debug.Log("LoadGame " + path);
+        // File.Delete(path);
+        if (!File.Exists(path))
+        {
+            Debug.Log("No Saved profile found");
+            return;
+        }
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream fs = File.Open(path, FileMode.Open);
+
+        SavedProfile loadedProfile = bf.Deserialize(fs) as SavedProfile;
+        fs.Close();
+
+        resources.wood = loadedProfile.s_wood;
+        resources.stone = loadedProfile.s_stones;
+        resources.food = loadedProfile.s_food;
+
+        for (int i = 0; i < loadedProfile.BuildinfoData.Count; i++)
+        {
+            Buildinfo buildingInfo = loadedProfile.BuildinfoData[i];
+            build.RebuildBuilding(buildingInfo.id, buildingInfo.connectedGridId, (int)buildingInfo.level, buildingInfo.yRot);
+            Debug.Log("Re3build " + buildingInfo.id);
+        }
     }
 
     private void Update()

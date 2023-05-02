@@ -140,6 +140,34 @@ public class Build : MonoBehaviour
             currentCreatedBuildable = null;
             buildInprogress = false;
         }
+    }
 
+    public void RebuildBuilding(int buildingID, int gridId, int buildingLevel, float rotY)
+    {
+        GameObject g = null;
+        foreach (GameObject gO in buildings.buildables)
+        {
+            Building b = gO.GetComponent<Building>();
+            if (b.info.id == buildingID)
+            {
+                g = b.gameObject;
+                break;
+            }
+        }
+
+        GameObject building = Instantiate(g);
+        buildings.builtObject.Add(building);
+
+        Building loadedBuilding = building.GetComponent<Building>();
+        loadedBuilding.info.level = buildingLevel;
+        loadedBuilding.placed = true;
+        loadedBuilding.info.connectedGridId = gridId;
+
+        GridElement myElement = grid[gridId].GetComponent<GridElement>();
+        loadedBuilding.transform.position = myElement.transform.position;
+        loadedBuilding.transform.rotation = Quaternion.Euler(0, rotY, 0);
+        loadedBuilding.info.yRot = rotY;
+        myElement.isOccupied = true;
+        myElement.connectedBuilding = loadedBuilding;
     }
 }
